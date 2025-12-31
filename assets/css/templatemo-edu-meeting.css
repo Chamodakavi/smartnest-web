@@ -1152,8 +1152,16 @@ section.upcoming-meetings .categories .main-button-red a {
   background-color: white;
   padding: 10px;
   border-radius: 10px !important;
+  height: 350px;
 }
-
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .client-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px !important;
+    height: 500px;
+  }
+}
 .client-user-container {
   display: flex;
   flex-direction: row;
@@ -1167,12 +1175,16 @@ section.upcoming-meetings .categories .main-button-red a {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 10px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  
 }
 
 .client-user-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .client-user-details {
@@ -1591,11 +1603,11 @@ section.contact-us #contact button:hover {
 section.contact-us .right-info {
   background-color: #a12c2f;
   border-radius: 20px;
-  padding: 40px;
+  padding: 20px;
 }
 
 section.contact-us .right-info ul li {
-  display: inline-block;
+  display: block;
   border-bottom: 1px solid rgba(250, 250, 250, 0.15);
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -2031,4 +2043,20 @@ responsive
     color: #1f272b;
   }
 
+}
+@media screen and (max-width: 768px) {
+  #bg-video {
+    display: none !important;
+  }
+
+  .main-banner {
+  
+    background-image: url('../images/bg-image.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    width: 100%;
+  }
 }
